@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
 
-    <meta http-equiv="refresh" content="3; url=https://drive.google.com/file/d/1y0G8E2hytApHSp1zzK2Tmns9jjaEkTPQ/view?usp=sharing">
-
     <style>
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial,Helvetica,sans-serif;
+            font-family:Arial, Helvetica, sans-serif;
         }
 
         body{
@@ -22,12 +20,13 @@
             align-items:center;
             background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
             color:white;
+            overflow:hidden;
         }
 
         .card{
             text-align:center;
             background:rgba(255,255,255,0.08);
-            backdrop-filter:blur(10px);
+            backdrop-filter:blur(12px);
             padding:40px;
             border-radius:20px;
             width:90%;
@@ -42,7 +41,7 @@
 
         p{
             color:#cbd5e1;
-            margin-bottom:25px;
+            margin-bottom:20px;
             line-height:1.6;
         }
 
@@ -85,6 +84,18 @@
             color:#94a3b8;
         }
     </style>
+
+    <script>
+        const fileUrl = "https://drive.google.com/file/d/1y0G8E2hytApHSp1zzK2Tmns9jjaEkTPQ/view?usp=sharing";
+
+        window.onload = function () {
+            document.getElementById("openFile").href = fileUrl;
+
+            setTimeout(() => {
+                window.location.href = fileUrl;
+            }, 2000);
+        };
+    </script>
 </head>
 <body>
 
@@ -97,12 +108,12 @@
         Please wait while we take you to the latest file.
     </p>
 
-    <a href="https://drive.google.com/file/d/1y0G8E2hytApHSp1zzK2Tmns9jjaEkTPQ/view?usp=sharing">
+    <a id="openFile" href="#">
         Open File Now
     </a>
 
     <small>
-        Redirecting automatically in 3 seconds...
+        Redirecting automatically in 2 seconds...
     </small>
 </div>
 
